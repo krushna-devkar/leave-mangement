@@ -5,7 +5,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav w-100">
       <li class="nav-item">
-        <p> </p>
+        <h1>{{staff.fName}}</h1>
       </li>
       <li class="nav-item ml-auto">
         <a class="btn btn-danger" (click)="logout()">Logout</a>
@@ -20,7 +20,7 @@
         <div class="col-md-4">
           <div class="card ">
             <div class="card-body ">
-             
+              {{staff.status.totalLeaves}}
             </div>
             <div class="card-footer ">
              Total Leaves
@@ -30,7 +30,7 @@
         <div class="col-md-4">
           <div class="card ">
             <div class="card-body ">
-              
+              {{staff.status.approved}}
             </div>
             <div class="card-footer ">
             Approved
@@ -40,7 +40,7 @@
         <div class="col-md-4">
           <div class="card ">
             <div class="card-body ">
-              
+              {{staff.status.rejected}}
             </div>
             <div class="card-footer ">
               Rejected
@@ -54,12 +54,12 @@
   </section>
   <div class="container">
     <div class="row">
-        <div class="col-4">
+        <div class="col-4"*ngFor="let leave of staffLeave">
             <div class="card">
                 <h3>Leave For startdate</h3>
-                <h5>Number of days :no of days</h5>
-                <h5 >Reason :reason</h5>
-                <h5>Status :status</h5>
+                <h5>Number of days :{{leave.noOfDays}}</h5>
+                <h5 >Reason :{{leave.reason}}</h5>
+                <h5>Status :{{leave.status}}</h5>
         </div>
     </div>
   </div> 
@@ -67,3 +67,4 @@
 
 
 <app-leave-form></app-leave-form>
+
