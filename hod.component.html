@@ -1,0 +1,41 @@
+
+  <nav class="navbar navbar-expand-lg bg-success">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav  w-100">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" style="color:black; font-size: 35px;" routerLink="/hod">Head Of Department</a>
+        </li>
+        <li class="nav-item ml-auto">
+          <a class="btn btn-danger" (click)="Logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class=" mt-5" *ngFor="let sLeave of content; index as  i"
+  >
+    <div class="card mb-2" >
+      <div class="card-header">
+     <h4></h4>  
+      </div>
+      <div class="card-body">
+        <p><strong>Leave For : </strong> {{sLeave.startDate}}</p>
+        <p><strong>Number of Days : </strong>{{sLeave.noOfDays}} </p>
+        <p><strong>Reason : </strong> {{sLeave.reason}}</p>
+        <div>
+          <div class="row">
+              <div class="col-3 mr-5">
+                  <button type="submit" class="btn btn-md btn-success " (click)="onApprove(sLeave.leaveId, sLeave.staffId, i)">Approve</button>
+              </div>
+              <div class="col-3 ml-5">
+                  <button type="submit" class="btn btn-md btn-danger " (click)="onReject(sLeave.leaveId, sLeave.staffId, i)">Reject</button>
+              </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>

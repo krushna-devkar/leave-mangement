@@ -1,0 +1,69 @@
+<nav class="navbar navbar-expand-lg bg-primary" >
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav w-100">
+      <li class="nav-item">
+        <p> </p>
+      </li>
+      <li class="nav-item ml-auto">
+        <a class="btn btn-danger" (click)="logout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+  <section >
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-4">
+          <div class="card ">
+            <div class="card-body ">
+             
+            </div>
+            <div class="card-footer ">
+             Total Leaves
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card ">
+            <div class="card-body ">
+              
+            </div>
+            <div class="card-footer ">
+            Approved
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card ">
+            <div class="card-body ">
+              
+            </div>
+            <div class="card-footer ">
+              Rejected
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary mt-5 mb-5" data-toggle="modal" data-target="#leave" id="apply">
+        <i class="fa fa-plus" aria-hidden="true"></i> Apply Leave</button>
+    </div>
+  </section>
+  <div class="container">
+    <div class="row">
+        <div class="col-4">
+            <div class="card">
+                <h3>Leave For startdate</h3>
+                <h5>Number of days :no of days</h5>
+                <h5 >Reason :reason</h5>
+                <h5>Status :status</h5>
+        </div>
+    </div>
+  </div> 
+      
+
+
+<app-leave-form></app-leave-form>
