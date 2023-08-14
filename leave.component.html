@@ -1,0 +1,54 @@
+<div class=" mt-5">
+    <div class="card mb-2" >
+      <div class="card-header">
+     <h4></h4>  
+      </div>
+      <div class="card-body">
+        <p><strong>Leave For : </strong> </p>
+        <p><strong>Number of Days : </strong> </p>
+        <p><strong>Reason : </strong> </p>
+        <div>
+          <div class="row">
+              <div class="col-3 mr-5">
+                  <button type="submit" class="btn btn-md btn-success " (click)="onApprove()">Approve</button>
+              </div>
+              <div class="col-3 ml-5">
+                  <button type="submit" class="btn btn-md btn-danger " (click)="onReject()">Reject</button>
+              </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class=" mt-5" *ngFor="let sLeave of content; index as  i"
+  >
+    <!-- <div class="card mb-2" >
+      <div class="card-header">
+     <h4>{{sLeave.firstName}}</h4>  
+      </div>
+      <div class="card-body">
+        <p><strong>Leave For : </strong> {{sLeave.startDate}}</p>
+        <p><strong>Number of Days : </strong>{{sLeave.noOfDays}} </p>
+        <p><strong>Reason : </strong> {{sLeave.reason}}</p>
+        <div>
+          <div class="row">
+              <div class="col-3 mr-5">
+                  <button type="submit" class="btn btn-md btn-success " (click)="onApprove(sLeave.leaveId, sLeave.staffId, i)">Approve</button>
+              </div>
+              <div class="col-3 ml-5">
+                  <button type="submit" class="btn btn-md btn-danger " (click)="onReject(sLeave.leaveId, sLeave.staffId, i)">Reject</button>
+              </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 
+  //{{sLeave.fName}} {{sLeave.lName}}
+  {{sLeave.startDate}}
+  {{sLeave.noOfDays}
+  {{sLeave.reason}}
+   --> 
