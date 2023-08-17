@@ -8,12 +8,14 @@
               <div class="form-group">
                 <label class="mb-4" for="username">Username</label>
                <input type="text" class="form-control"  name="username" formControlName="username" id="username"> 
+                <span class="text-danger" *ngIf="!loginForm.get('username').valid && loginForm.get('username').touched">Username is required</span>
             </div>
             </div>
             <div class="col-md-12 my-1">
               <div class="form-group">
                 <label class="mb-4" for="password">Password </label>
               <input type="password"  class="form-control "  id="password"  formControlName="password">
+                <span class="text-danger" *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched">Password is required</span>
   
               </div>
             </div>
