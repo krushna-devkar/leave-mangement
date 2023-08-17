@@ -20,9 +20,9 @@ ngOnInit(): void {
     this.staff = JSON.parse( this.userData);
   
     this.leaveForm = new FormGroup({
-    start: new FormControl('',[Validators.required]),
-    end: new FormControl('',[Validators.required]),
-    reason : new FormControl('', Validators.required)
+    start: new FormControl(''),
+    end: new FormControl(''),
+    reason : new FormControl('')
   })
 }
   
